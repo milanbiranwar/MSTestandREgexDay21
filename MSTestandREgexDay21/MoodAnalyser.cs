@@ -18,13 +18,9 @@ namespace MSTestandREgexDay21
         }
         public string analyseMood()
         {
-            //"null"==""
-            //string s = null;
-
-            //string abc = "";
             try
-            {   //"null"==""
-                if (this.message.Equals(string.Empty))  // ""=="null"
+            {   
+                if (this.message.Equals(string.Empty))  
                 {
                     throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.EMPTY_MESSAGE, "Mood should not be empty");
                 }
@@ -35,7 +31,6 @@ namespace MSTestandREgexDay21
             }
             catch (NullReferenceException obj)
             {
-                //throw new Exception(obj.Message);
 
                 throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.NULL_MESSAGE, "Mood should not be null");
             }
